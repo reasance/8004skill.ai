@@ -30,7 +30,7 @@ export default function Navbar() {
             Docs
           </Link>
           <a
-            href="https://github.com/matteoscurati/8004skill"
+            href="https://github.com/reasance/8004skill"
             target="_blank"
             rel="noopener noreferrer"
             className="text-foreground/80 hover:text-vw-cyan transition-colors"
@@ -79,7 +79,7 @@ export default function Navbar() {
             <Link href="/docs" onClick={() => setOpen(false)} className="text-foreground/80 hover:text-vw-cyan py-1">
               Docs
             </Link>
-            <a href="https://github.com/matteoscurati/8004skill" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-vw-cyan py-1">
+            <a href="https://github.com/reasance/8004skill" target="_blank" rel="noopener noreferrer" className="text-foreground/80 hover:text-vw-cyan py-1">
               GitHub
             </a>
           </div>

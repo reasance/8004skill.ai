@@ -6,7 +6,7 @@ export default function QuickStart() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
-    await navigator.clipboard.writeText("npx skills add matteoscurati/8004skill -g");
+    await navigator.clipboard.writeText("npx skills add reasance/8004skill -g");
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -38,7 +38,7 @@ export default function QuickStart() {
             <span className="text-foreground/40"># Step 1: Install the skill</span>
             {"\n"}
             <span className="text-vw-green">$</span>{" "}
-            <span className="text-foreground">npx skills add matteoscurati/8004skill -g</span>
+            <span className="text-foreground">npx skills add reasance/8004skill -g</span>
             {"\n\n"}
             <span className="text-foreground/40"># Step 2: Configure your chain</span>
             {"\n"}

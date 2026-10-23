@@ -49,7 +49,7 @@ export default function DocsPage() {
               <div className="space-y-4">
                 <div>
                   <h3 className="text-sm font-bold text-vw-cyan mb-2">1. Install</h3>
-                  <CodeBlock code="npx skills add matteoscurati/8004skill -g" language="bash" />
+                  <CodeBlock code="npx skills add reasance/8004skill -g" language="bash" />
                 </div>
                 <div>
                   <h3 className="text-sm font-bold text-vw-cyan mb-2">2. Configure</h3>
@@ -81,7 +81,7 @@ export default function DocsPage() {
                 Universal install via the <a href="https://github.com/vercel-labs/skills" target="_blank" rel="noopener noreferrer" className="text-vw-cyan hover:underline">Vercel Skills CLI</a>.
                 Supports Claude Code, Cursor, Codex, and 35+ more agents. Symlinks by default.
               </p>
-              <CodeBlock code="npx skills add matteoscurati/8004skill -g" language="bash" />
+              <CodeBlock code="npx skills add reasance/8004skill -g" language="bash" />
 
               <h3 className="text-lg font-heading font-bold text-vw-cyan mb-3 mt-8">npx</h3>
               <p className="text-sm text-foreground/70 mb-3 leading-relaxed">
@@ -91,7 +91,7 @@ export default function DocsPage() {
 
               <h3 className="text-lg font-heading font-bold text-vw-cyan mb-3 mt-8">From Source</h3>
               <CodeBlock
-                code={`git clone https://github.com/matteoscurati/8004skill.git\ncd 8004skill\n./install.sh`}
+                code={`git clone https://github.com/reasance/8004skill.git\ncd 8004skill\n./install.sh`}
                 language="bash"
               />
 
@@ -100,7 +100,7 @@ export default function DocsPage() {
                 Clone the repo, install dependencies, and symlink into your agent&apos;s skill directory:
               </p>
               <CodeBlock
-                code={`git clone https://github.com/matteoscurati/8004skill.git\ncd 8004skill\nnpm install\n\n# Claude Code\nmkdir -p ~/.claude/skills\nln -s "$(pwd)" ~/.claude/skills/8004skill\n\n# OpenClaw\nmkdir -p ~/.openclaw/skills\nln -s "$(pwd)" ~/.openclaw/skills/8004skill`}
+                code={`git clone https://github.com/reasance/8004skill.git\ncd 8004skill\nnpm install\n\n# Claude Code\nmkdir -p ~/.claude/skills\nln -s "$(pwd)" ~/.claude/skills/8004skill\n\n# OpenClaw\nmkdir -p ~/.openclaw/skills\nln -s "$(pwd)" ~/.openclaw/skills/8004skill`}
                 language="bash"
               />
             </section>

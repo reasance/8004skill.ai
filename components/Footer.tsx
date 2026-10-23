@@ -15,7 +15,7 @@ export default function Footer() {
             <h4 className="text-sm font-bold text-vw-purple mb-3">Links</h4>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="https://github.com/matteoscurati/8004skill" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-vw-cyan transition-colors">
+                <a href="https://github.com/reasance/8004skill" target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-vw-cyan transition-colors">
                   GitHub Repository
                 </a>
               </li>

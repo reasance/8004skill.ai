@@ -84,7 +84,7 @@ export default function RootLayout({
                 url: "https://www.8004skill.ai",
                 logo: "https://www.8004skill.ai/favicon.ico",
                 sameAs: [
-                  "https://github.com/matteoscurati/8004skill",
+                  "https://github.com/reasance/8004skill",
                   "https://www.npmjs.com/package/8004skill",
                 ],
               },
