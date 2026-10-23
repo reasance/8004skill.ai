@@ -25,9 +25,12 @@ export default function Chains() {
     { name: "Soneium", id: 1868 },
     { name: "GOAT Network", id: 2345 },
     { name: "Metis", id: 1088 },
-    { name: "Hedera", id: 295 },
     { name: "SKALE Base", id: 1187947933 },
     { name: "Shape", id: 360 },
+    { name: "Robinhood Chain", id: 4663 },
+    { name: "Billions", id: 45056 },
+    { name: "Injective", id: 1776 },
+    { name: "0G", id: 16661 },
   ];
 
   return (

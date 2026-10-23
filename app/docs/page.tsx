@@ -333,7 +333,7 @@ export default function DocsPage() {
                 </div>
                 <p className="text-sm text-foreground/70 mb-3">
                   Rate agents on -100 to 100 scale (decimals supported). Add up to 2 tags from standard set:
-                  starred, reachable, uptime, successRate, responseTime, revenues, tradingYield. Include optional
+                  starred, reachable, ownerVerified, uptime, successRate, responseTime, blocktimeFreshness, revenues, tradingYield. Include optional
                   text feedback (stored on IPFS). Target specific endpoints. Off-chain feedback supports spec-aligned granularity: target specific MCP tools/prompts/resources, A2A skills/contexts/tasks, or OASF skills/domains.
                 </p>
                 <h4 className="text-sm font-bold text-vw-green mb-2">Sub-operations</h4>
@@ -702,16 +702,19 @@ export default function DocsPage() {
                     <tr><td>Soneium</td><td>1868</td><td>Mainnet</td></tr>
                     <tr><td>GOAT Network</td><td>2345</td><td>Mainnet</td></tr>
                     <tr><td>Metis</td><td>1088</td><td>Mainnet</td></tr>
-                    <tr><td>Hedera</td><td>295</td><td>Mainnet</td></tr>
                     <tr><td>SKALE Base</td><td>1187947933</td><td>Mainnet</td></tr>
                     <tr><td>Shape</td><td>360</td><td>Mainnet</td></tr>
+                    <tr><td>Robinhood Chain</td><td>4663</td><td>Mainnet</td></tr>
+                    <tr><td>Billions</td><td>45056</td><td>Mainnet</td></tr>
+                    <tr><td>Injective</td><td>1776</td><td>Mainnet</td></tr>
+                    <tr><td>0G</td><td>16661</td><td>Mainnet</td></tr>
                   </tbody>
                 </table></div>
               </div>
               <div className="gradient-border p-4 mb-6">
                 <p className="text-xs text-foreground/60">
                   <strong className="text-vw-purple">Testnets available too.</strong>{" "}
-                  Many deployed chains also have testnet deployments (Arbitrum Sepolia, Optimism Sepolia, Polygon Amoy, Monad Testnet, and more).
+                  24 testnets have deployments too (Arbitrum Sepolia, Optimism Sepolia, Polygon Amoy, Monad Testnet, Robinhood Chain Testnet, 0G Galileo, and more).
                   All use the same deterministic contract addresses. See the skill reference for the full matrix.
                 </p>
               </div>
@@ -967,7 +970,7 @@ export default function DocsPage() {
               </p>
               <div className="gradient-border p-4 mb-4">
                 <ol className="list-decimal list-inside text-sm text-foreground/70 space-y-1">
-                  <li><code>x402support: true</code> &mdash; enabled via <code>--x402 true</code></li>
+                  <li><code>x402Support: true</code> in the registration file &mdash; enabled via <code>--x402 true</code></li>
                   <li><strong className="text-vw-green">Active</strong> status &mdash; <code>--active true</code> (default)</li>
                   <li><strong className="text-vw-green">Wallet</strong> address set &mdash; Operation 7 (wallet set)</li>
                   <li>At least one <strong className="text-vw-green">endpoint</strong> &mdash; MCP, A2A, or web</li>
@@ -1110,12 +1113,12 @@ export default function DocsPage() {
                 Three lightweight registries accessed via <a href="https://www.ag0.xyz/" target="_blank" rel="noopener noreferrer" className="text-vw-cyan hover:underline">agent0 SDK</a>:
               </p>
               <ol className="list-decimal list-inside text-sm text-foreground/70 space-y-2 mb-4">
-                <li><strong className="text-vw-purple">Identity Registry (ERC-721):</strong> Agent IDs as NFTs. Each token references a registration file (IPFS/HTTP/on-chain data URI) with name, description, endpoints, and capabilities. Supports MCP, A2A, ENS, OASF endpoint types.</li>
-                <li><strong className="text-vw-purple">Reputation Registry:</strong> On-chain feedback with ratings (-100 to 100), tags, and optional IPFS-stored text. Feedback is immutable once submitted (can only be revoked, not edited). Agent owners can append responses.</li>
-                <li><strong className="text-vw-purple">Validation Registry:</strong> Third-party validator attestations for trust models (reputation, crypto-economic, TEE attestation).</li>
+                <li><strong className="text-vw-purple">Identity Registry (ERC-721):</strong> Agent IDs as NFTs. Each token references a registration file (IPFS/HTTP/on-chain data URI) with name, description, services (endpoints), and capabilities. Supports web, MCP, A2A, OASF, ENS, DID and email services.</li>
+                <li><strong className="text-vw-purple">Reputation Registry:</strong> On-chain feedback as a signed value with decimals plus up to 2 tags; optional details such as text live in an IPFS feedback file. 8004skill uses a -100 to 100 scale for quality ratings. Feedback is immutable once submitted (can only be revoked, not edited). Anyone, including the agent owner, can append responses.</li>
+                <li><strong className="text-vw-purple">Validation Registry:</strong> Third-party validator attestations (scores 0&ndash;100) for crypto-economic, zkML or TEE trust models. Deployed on every chain; reference-only in 8004skill until the SDK exposes it.</li>
               </ol>
               <p className="text-sm text-foreground/70 mb-3">
-                All contracts use deterministic CREATE2 deployment &mdash; same addresses on every chain. Currently deployed on 25+ chains.
+                All contracts use deterministic CREATE2 deployment &mdash; same addresses on every chain. Currently deployed on 50+ chains (mainnets and testnets).
               </p>
               <p className="text-sm text-foreground/70 mb-3">
                 <strong>Global Agent ID Format:</strong> <code>eip155:&#123;chainId&#125;:&#123;identityRegistryAddress&#125;:&#123;tokenId&#125;</code>
