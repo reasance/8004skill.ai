@@ -332,7 +332,7 @@ export default function DocsPage() {
                   </div>
                 </div>
                 <p className="text-sm text-foreground/70 mb-3">
-                  Rate agents on -100 to 100 scale (decimals supported). Add up to 2 tags from standard set:
+                  Rate agents on a -100 to 100 quality scale, or record metrics on the spec&apos;s own scales: uptime 0&ndash;100%, response time in ms, revenues, reachable 0/1 and more (decimals supported; the range follows tag1). Add up to 2 tags from the standard set:
                   starred, reachable, ownerVerified, uptime, successRate, responseTime, blocktimeFreshness, revenues, tradingYield. Include optional
                   text feedback (stored on IPFS). Target specific endpoints. Off-chain feedback supports spec-aligned granularity: target specific MCP tools/prompts/resources, A2A skills/contexts/tasks, or OASF skills/domains.
                 </p>
@@ -1114,7 +1114,7 @@ export default function DocsPage() {
               </p>
               <ol className="list-decimal list-inside text-sm text-foreground/70 space-y-2 mb-4">
                 <li><strong className="text-vw-purple">Identity Registry (ERC-721):</strong> Agent IDs as NFTs. Each token references a registration file (IPFS/HTTP/on-chain data URI) with name, description, services (endpoints), and capabilities. Supports web, MCP, A2A, OASF, ENS, DID and email services.</li>
-                <li><strong className="text-vw-purple">Reputation Registry:</strong> On-chain feedback as a signed value with decimals plus up to 2 tags; optional details such as text live in an IPFS feedback file. 8004skill uses a -100 to 100 scale for quality ratings. Feedback is immutable once submitted (can only be revoked, not edited). Anyone, including the agent owner, can append responses.</li>
+                <li><strong className="text-vw-purple">Reputation Registry:</strong> On-chain feedback as a signed value with decimals plus up to 2 tags; optional details such as text live in an IPFS feedback file. 8004skill uses a -100 to 100 scale for quality ratings and the spec&apos;s scales for measurement tags. Feedback is immutable once submitted (can only be revoked, not edited). Anyone, including the agent owner, can append responses.</li>
                 <li><strong className="text-vw-purple">Validation Registry:</strong> Third-party validator attestations (scores 0&ndash;100) for crypto-economic, zkML or TEE trust models. Deployed on every chain; reference-only in 8004skill until the SDK exposes it.</li>
               </ol>
               <p className="text-sm text-foreground/70 mb-3">
